@@ -1,2 +1,111 @@
-<h1>👀 Watch this space... 👀</h1>
-<a href="http://2017-kiwi.ruby.nz">2017 edition</a>
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Kiwi Ruby</title>
+
+  <base href="https://kiwi.ruby.nz/">
+  
+  <meta content="Kiwi Ruby is a Ruby conference being held in Wellington, New Zealand on November 31st 2019. It will be very good." name="description" property="og:description" />
+  <meta content="/social-image.png" property="og:image" />
+  <meta content="website" property="og:type" />
+  <meta content="Kiwi Ruby" property="og:site_name" />
+  <meta content="Home — Kiwi Ruby" property="og:title" />
+  <meta content="https://kiwi.ruby.nz/" property="og:url" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css?v=0.11">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d60b51">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <script>
+
+    var paraEls = document.getElementsByClassName("kr-paralax"),
+    offset = 0;
+
+    window.addEventListener('scroll', function (e) {
+
+      offset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+      if(!paraEls.length){
+        return false;
+      }
+
+      for (i = 0; i < paraEls.length; i++) { 
+        if(paraEls[i].getAttribute("paralax") == null){
+          return false;
+        }
+        paraEls[i].style.transform = "translate(0, "+parseInt(offset * -(paraEls[i].getAttribute("paralax")))+"px)";
+      }
+
+    }, false);
+
+  </script>
+
+</head>
+
+<body class="vanilla">
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <header id="kr-header" class="kr-banner row row--narrow">
+    <div class="column column--4">
+      <div  class="kr-content_inner">
+        <h1 class="kr-logo">
+          <span class="hidden">Kiwi Ruby </span>
+          <img src="img/kiwi-ruby-logo.svg?v=0.1" class="kr-paralax" paralax="0.5"/>
+        </h1>
+      </div>
+    </div>
+    <div class="column column--6">
+      <div  class="kr-content_inner">
+          
+      </div>
+    </div>
+  </header>
+
+  <div class="kr-banner_footer u-wrapper-margins"></div>
+
+  <section class="kr-content u-wrapper-margins">
+    <div class="row row--narrow row--small-column row--reverse-small">
+      <div class="column column--4 kr-details">
+        <div  class="kr-content_inner">
+          <h3 class="kr-details_title u-mt-10 u-mb-0"><strong>November 2019</strong></h3>
+          <p class="u-mt-10">More details on the way</p>
+          <h2 class="kr-details_title u-mt-35 u-mb-0">Call for Papers</h2>
+          <p class="u-mt-10">
+            Would you like to be a speaker at <strong>KiwiRuby 2019</strong>? 
+            We're accepting proposals for presentations until <strong>July 31st, 11:59pm</strong> NZ time
+          </p>
+          <a class="kr-btn" href="papercall.io" target="_blank"><span>Submit your proposal here</span></a>
+
+        </div>
+      </div>
+      <div class="column column--6">
+        <div  class="kr-content_inner">
+          <img class="kr-content_feature-img kr-paralax" paralax="0.1" src="img/banner_illo.png"/>
+          <h2 class="kr-content_title u-mt-10">A Ruby conference held in <a class="text-shadow" href="https://goo.gl/maps/JYhEif3r5jncc49s5" target="_blank">Wellington, New Zealand</a>.</h2>
+          <p class="kr-content_para">
+            With a mixture of local and international speakers, there will be one single-track day of talks. We'll cover topics that interest, excite, and delight Rubyists and the Ruby-curious of all levels.
+          </p>
+       
+          <a class="kr-btn kr-btn--twitter" href="http://twitter.com/kiwirubyconf" target="_blank"><span>@kiwirubyconf</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+  </footer>
+</body>
+
+</html>

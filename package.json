@@ -1,0 +1,24 @@
+{
+  "name": "kiwi.ruby",
+  "version": "1.0.0",
+  "description": "Kiwi Ruby conference website",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Marc McHardy",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-real-favicon": "^0.3.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}
