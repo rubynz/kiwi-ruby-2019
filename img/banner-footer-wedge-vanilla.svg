@@ -1,0 +1,14 @@
+<svg
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	x="0px" y="0px"
+	viewBox="0 0 1200 250"
+	preserveAspectRatio="none"
+	xml:space="preserve"
+>
+	<g>
+		<path style="fill:#ffe9c8;" d="M1200,0L300,200L0,100v150h1200V0z"/>
+	</g>
+	<polygon style="fill:#fff1de;" points="300,200 0,100 0,120 300,220 1200,20 1200,0 "/>
+</svg>
