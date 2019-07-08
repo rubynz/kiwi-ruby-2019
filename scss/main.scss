@@ -328,6 +328,21 @@ body {
     text-align: right;
 }
 
+.u-viewable {
+    &--small {
+        display: block;
+        @media only screen and (min-width: 667px){
+            display: none;
+        }
+    }
+    &--large {
+        display: none;
+        @media only screen and (min-width: 667px){
+            display: block;
+        }
+    }
+}
+
 .u-mt-0 {
     margin-top: 0;
 }
