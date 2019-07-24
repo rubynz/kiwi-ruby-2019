@@ -112,6 +112,7 @@ textarea {
 
 $plum : #d60a51;
 $vanilla : #ffe9c8;
+$vanillaLight : #fff1de;
 
 
 h2, h3 {
@@ -245,14 +246,19 @@ body {
 
 .kr-content {
     background-color: $vanilla;
-    border-bottom: 30px solid#fff1de;
     color: $plum;
-    margin: 0 10px 10px;
-    padding-bottom: 50px;
-    
+    margin: 0 10px;
+    padding-bottom: 30px;
     &_inner {
         padding: 2em;
         padding-bottom: 0;
+    }
+    &_inner--sponsor {
+        padding: 0 2em;
+        padding-bottom: 0;
+    }
+    &_title--sponsor {
+        margin-top: -1.45em;
     }
     &_title {
         font-family: 'League Spartan Bold', sans-serif;
@@ -277,15 +283,22 @@ body {
             max-width: calc(100% - 120px);
         }
     }
-
-    @media only screen and (min-width: 667px){ 
-        margin-bottom: 15px;
+    &--sponsors {
+        background: $vanillaLight;
+        margin-bottom: 50px;
         padding-bottom: 100px;
-    }
-    @media only screen and (min-width: 1200px){ 
-        margin-bottom: 30px;
+
     }
     
+}
+
+.kr-sponsor-logo {
+    width: 300px;
+    max-width: 100%;
+    &_link {
+        display: block;
+        padding-right: 20px;
+    }
 }
 
 .kr-btn {
@@ -341,6 +354,28 @@ body {
             display: block;
         }
     }
+    &--x-large {
+        display: none;
+        @media only screen and (min-width: 940px){
+            display: block;
+        }
+    }
+}
+
+
+.u-rule--ruby {
+    border: none;
+    background-image: url('../img/icon-ruby.svg'), url('../img/icon-ruby.svg'), url('../img/icon-ruby.svg');
+    background-repeat: no-repeat;
+    background-position: left center, 
+                     center center,
+                     right center;
+    height: 15px;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid transparent;
 }
 
 .u-mt-0 {
@@ -355,6 +390,7 @@ body {
 .u-mt-35 {
     margin-top: 35px;
 }
+
 .u-mb-0 {
     margin-bottom: 0;
 }
