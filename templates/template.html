@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Kiwi Ruby</title>
+    <title><!-- build:title --></title>
     
     <meta content="Kiwi Ruby is a Ruby conference being held in Wellington, New Zealand on November 1st 2019. It will be very good." name="description" property="og:description" />
     <meta content="/social-image.png" property="og:image" />
@@ -43,64 +43,13 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
     <header id="kr-header" class="kr-banner row row--narrow">
-        
-  <div class="column column--4">
-    <div  class="kr-content_inner">
-      <h1 class="kr-logo">
-        <span class="hidden">Kiwi Ruby </span>
-        <img src="../img/kiwi-ruby-logo.svg?v=0.1" class="kr-paralax" paralax="0.5"/>
-      </h1>
-    </div>
-  </div>
-
-  <div class="column column--6">
-    <div  class="kr-content_inner">
-
-    </div>
-  </div>
-
+        <!-- build:header -->
     </header>
 
-    
-  <div class="kr-banner_footer u-wrapper-margins"></div>
-
+    <!-- build:banner-footer -->
 
     <section class="kr-content u-wrapper-margins">
-        
-  <div class="row row--narrow row--small-column row--reverse-small">
-    <div class="column column--4 kr-details">
-      <div  class="kr-content_inner">
-
-        <h3 class="kr-details_title u-mt-10 u-mb-0 u-viewable--large"><strong>1st of November 2019</strong></h3>
-        <p class="u-mt-10 u-viewable--large">Te Papa, Wellington</p>
-      </div>
-    </div>
-    <div class="column column--6">
-      <div  class="kr-content_inner">
-        <img class="kr-content_feature-img kr-paralax" paralax="0.1" src="../img/banner_illo.png"/>
-        <h2 class="kr-content_title u-mt-10">A Ruby conference held in <a class="text-shadow" href="https://goo.gl/maps/JYhEif3r5jncc49s5" target="_blank">Wellington, New Zealand</a>.</h2>
-        <p class="kr-content_para">
-          With a mixture of local and international speakers, there will be one single-track day of talks. We'll cover topics that interest, excite, and delight Rubyists and the Ruby-curious of all levels.
-        </p>
-
-        <h3 class="kr-details_title u-mt-10 u-mb-0 u-viewable--small"><strong>1st of November 2019</strong></h3>
-        <p class="u-mt-10 u-viewable--small">More details on the way</p>
-
-        <a class="kr-btn kr-btn--twitter" href="http://twitter.com/kiwirubyconf" target="_blank"><span>@kiwirubyconf</span></a>
-
-      </div>
-
-      <div class="kr-card u-mt-35">
-        <h2 class="kr-details_title u-mb-0">We're looking for sponsors</h2>
-        <p class="u-mt-10">
-          If you're interested in becoming a sponsor please send us an email, we'd love to hear from you <a href="mailto:kiwi@ruby.nz">kiwi@ruby.nz</a>
-        </p>
-      </div>
-
-    </div>
-  </div>
-  <hr class="u-rule--ruby">
-
+        <!-- build:content -->
     </section>
 
     <section class="kr-content kr-content--sponsors u-wrapper-margins">
@@ -132,7 +81,25 @@
             </div>
         </div>
     
-        
+        <!--removeIf(notlive)-->
+        <div class="row row--narrow u-mt-30">
+            <div  class="kr-content_inner--sponsor row row--small-column ">
+            <div class="column column--3">
+                <a href="https://fluxfederation.com" class="kr-sponsor-logo_link" target="_blank">
+                <img src="../img/sponsors/logo-flux.png" class="kr-sponsor-logo"/>
+                </a>
+            </div>
+            <div class="column column--5">
+                <p class="u-mt-10">
+                    Flux is a software platform that makes it easier for you to run your energy retail business end-to-end while unlocking opportunities to innovate.
+                </p>
+            </div>
+            <div class="column column--2">
+    
+            </div>
+            </div>
+        </div>
+        <!--endRemoveIf(notlive)-->
     
     </section>
 

@@ -18,7 +18,9 @@
     "gulp": "^4.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-real-favicon": "^0.3.2",
+    "gulp-remove-code": "^3.0.4",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5"
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-template-html": "^0.2.2"
   }
 }

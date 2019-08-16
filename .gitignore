@@ -5,6 +5,7 @@
 
 doc
 node_modules
+cache
 .editorconfig
 *.DS_Store
 
