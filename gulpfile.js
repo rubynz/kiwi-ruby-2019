@@ -8,7 +8,9 @@ fs = require("fs"),
 sourcemaps = require("gulp-sourcemaps"),
 browserSync = require("browser-sync").create(),
 removeCode = require('gulp-remove-code'),
+// concat = require('gulp-concat'),
 template = require('gulp-template-html');
+
 
 var paths = {
 	styles: {
@@ -62,6 +64,18 @@ function reload() {
 	browserSync.reload();
 }
 
+function move() {   
+    return gulp
+        .src('./node_modules/stickybits/dist/stickybits.min.js', { allowEmpty: true })
+        .pipe(gulp.dest('./js/vendor/'));
+}
+
+// function packJs () {
+//     return gulp.src(['./js/vendor/*.js', './js/main.js'], { allowEmpty: true })
+//         .pipe(concat('bundle.js'))
+//         .pipe(gulp.dest('./js'));
+// }
+
 // Add browsersync initialization at the start of the watch task
 function watch() {
 browserSync.init({
@@ -74,11 +88,13 @@ browserSync.init({
     // proxy: "yourlocal.dev"
 });
 gulp.watch(paths.styles.src, style);
+
 // We should tell gulp which files to watch to trigger the reload
 // This can be html or whatever you're using to develop your website
 // Note -- you can obviously add the path to the Paths object
 gulp.watch(paths.templates.src, templatify).on('change', browserSync.reload);
 gulp.watch(paths.templates.cache, remover).on('change', browserSync.reload);
+
 }
 
 // We don't have to expose the reload function
@@ -94,11 +110,17 @@ exports.watch = watch
 exports.style = style;
 exports.remover = remover;
 exports.templatify = templatify;
+exports.move = move;
+// exports.packJs = packJs;
 
 /*
 * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
 */
-var build = gulp.parallel(style, templatify, remover, watch);
+
+// gulp.task('default', function(){
+
+// );
+var build = gulp.parallel(style, templatify, remover, move, watch);
 
 /*
 * You can still use `gulp.task` to expose tasks

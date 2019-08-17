@@ -17,3 +17,27 @@ var paraEls = document.getElementsByClassName("kr-paralax"),
     }
 
     }, false);
+
+var navbar = document.getElementById("navbar"),
+    navOffset = navbar.offsetTop;
+
+    window.addEventListener('scroll', function (e) {
+
+        offset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        
+        if (window.pageYOffset  >= navOffset) {
+            navbar.classList.add("stuck")
+        } else {
+            navbar.classList.remove("stuck");
+        }
+
+    }, false);
+
+// (function() {
+//     var stickybit = stickybits('.sticky-nav', {
+//         parentClass: 'sticky-parent',
+//         stickyClass: 'sticky-nav--active',
+//         stuckClass: 'sticky-nav--stuck',
+//         stickyChangeClass: 'sticky-nav--change'
+//       });
+// });
