@@ -8,7 +8,6 @@ fs = require("fs"),
 sourcemaps = require("gulp-sourcemaps"),
 browserSync = require("browser-sync").create(),
 removeCode = require('gulp-remove-code'),
-// concat = require('gulp-concat'),
 template = require('gulp-template-html');
 
 
@@ -30,7 +29,7 @@ var paths = {
 
 function templatify() {
 return gulp
-	.src('content/**/*.html')
+	.src(['content/**/*.html'])
     .pipe(template('templates/template.html'))
     .pipe(gulp.dest(paths.templates.cache));
 }
@@ -58,23 +57,10 @@ return gulp
     .pipe(browserSync.stream());
 }
 
-
 // A simple task to reload the page
 function reload() {
 	browserSync.reload();
 }
-
-function move() {   
-    return gulp
-        .src('./node_modules/stickybits/dist/stickybits.min.js', { allowEmpty: true })
-        .pipe(gulp.dest('./js/vendor/'));
-}
-
-// function packJs () {
-//     return gulp.src(['./js/vendor/*.js', './js/main.js'], { allowEmpty: true })
-//         .pipe(concat('bundle.js'))
-//         .pipe(gulp.dest('./js'));
-// }
 
 // Add browsersync initialization at the start of the watch task
 function watch() {
@@ -110,17 +96,12 @@ exports.watch = watch
 exports.style = style;
 exports.remover = remover;
 exports.templatify = templatify;
-exports.move = move;
-// exports.packJs = packJs;
 
 /*
 * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
 */
 
-// gulp.task('default', function(){
-
-// );
-var build = gulp.parallel(style, templatify, remover, move, watch);
+var build = gulp.parallel(style, templatify, remover, watch);
 
 /*
 * You can still use `gulp.task` to expose tasks
