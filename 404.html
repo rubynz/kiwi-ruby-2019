@@ -5,6 +5,12 @@
     <title>Page Not Found</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        @font-face {
+            font-family: 'League Spartan Bold';
+            font-style: normal;
+            font-weight: normal;
+            src: local('League Spartan Bold'), url('./fonts/LeagueSpartan-Bold.woff') format('woff');
+        }
 
         * {
             line-height: 1.2;
@@ -12,7 +18,6 @@
         }
 
         html {
-            color: #888;
             display: table;
             font-family: sans-serif;
             height: 100%;
@@ -21,20 +26,37 @@
         }
 
         body {
+            background-color: #fff1de;
+            color: #d60a51;
             display: table-cell;
             vertical-align: middle;
             margin: 2em auto;
         }
 
         h1 {
-            color: #555;
             font-size: 2em;
             font-weight: 400;
+            font-family: 'League Spartan Bold', sans-serif;
+            padding-bottom: 0.5rem;
         }
 
         p {
-            margin: 0 auto;
-            width: 280px;
+            margin: 1rem auto;
+            width: 600px;
+            font-family: Source Code Pro, monospace;
+        }
+
+        a {
+            color: #d60a51;
+        }
+
+        a:hover {
+            color: #aa0841;
+        }
+
+        .rubies > img {
+            width: 1rem;
+            padding: 1rem;
         }
 
         @media only screen and (max-width: 280px) {
@@ -54,6 +76,11 @@
 </head>
 <body>
     <h1>Page Not Found</h1>
+    <div class="rubies">
+      <img src="./img/icon-ruby.svg" alt="Ruby icon">
+      <img src="./img/icon-ruby.svg" alt="Ruby icon">
+      <img src="./img/icon-ruby.svg" alt="Ruby icon">
+    </div>
     <p>Sorry, but the page you were trying to view does not exist.</p>
     <p><a href="https://kiwi.ruby.nz">Head back to the main page</a>, or you might be able to find what you're looking for on <a href="https://2017-kiwi.ruby.nz">the 2017 edition of Kiwi Ruby</a>.</p>
 </body>
