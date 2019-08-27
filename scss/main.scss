@@ -232,6 +232,11 @@ body {
     padding: 2em 2em 2.5em;
     box-shadow: 4px 4px 0px;
     margin-right: 2em;
+    &--sponsor {
+        margin-right: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 
 .kr-logo {

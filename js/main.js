@@ -33,11 +33,6 @@ var navbar = document.getElementById("navbar"),
 
     }, false);
 
-// (function() {
-//     var stickybit = stickybits('.sticky-nav', {
-//         parentClass: 'sticky-parent',
-//         stickyClass: 'sticky-nav--active',
-//         stuckClass: 'sticky-nav--stuck',
-//         stickyChangeClass: 'sticky-nav--change'
-//       });
-// });
+    window.addEventListener("resize", function(){
+        navOffset = navbar.offsetTop;
+    });
