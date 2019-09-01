@@ -5,8 +5,8 @@
 <header id="kr-header" class="kr-header--sub-page">
   <h1 class="kr-logo kr-logo--sub-page">
     <span class="hidden">Kiwi Ruby </span>
-    <a href="/">
-      <img src="../img/kiwi-ruby-logo.svg?v=0.1"/>
+    <a href="./">
+      <img src="./img/kiwi-ruby-logo.svg?v=0.1"/>
     </a>
   </h1>
 </header>
@@ -28,47 +28,38 @@
 
     </div>
     <div class="column column--3">
-  
     </div>
   </div>
-  <div class="row row--narrow row--small-column u-mt-30">
-    
+  <div class="kr-talks row row--narrow row--small-column u-mt-30">
+
+    {{#each people}}
+    {{#if this.live}}
     <div class="kr-talk_item column column--3">
       <div class="kr-card">
-        <img src="../img/speakers/eoin.jpg" class="kr-talk_speaker-photo"/>
+        <img src="./img/speakers/speaker-{{this.link}}.jpg" class="kr-talk_speaker-photo"/>
 
-        <h2 class="kr-talk_title">Understanding 'Hello World'</h2>
-        <h3 class="kr-talk_speaker-name">Eoin Kelly</h3>
+        <a class="kr-talk_read-more" href="./speakers/{{this.link}}">
+          <h3 class="kr-talk_speaker-name">{{this.name}}</h3>
+        </a>
+        <h2 class="kr-talk_title">{{this.title}}</h2>
+        
         <p class="kr-talk_abstract">
-          'Hello, World!' is the first step of many a ruby journey. How much can we learn by going deep on everything it can teach us? Join me on a fun dive down through the stack as we go deep on everything from Strings, IO, Unix, the Ruby VM and x86 Assembler letting the simplest of programs be our guide.
+            {{this.shortDesc}}
         </p>
-         <a class="kr-btn kr-btn--twitter" href="http://twitter.com/kiwirubyconf" target="_blank"><span>@kiwirubyconf</span></a>
+         <a class="kr-talk_read-more" href="./speakers/{{this.link}}">Read more</a>
+         <a class="kr-btn kr-btn--twitter" href="https://twitter.com/{{this.twitter}}" target="_blank"><span>@{{this.twitter}}</span></a>
       </div>
     </div>
-    
-    <div class="kr-talk_item column column--3">
-      <div class="kr-card">
-        <img src="../img/speakers/eoin.jpg" class="kr-talk_speaker-photo"/>
+    {{/if}}
+    {{/each}}
 
-        <h2 class="kr-talk_title">Understanding 'Hello World'</h2>
-        <h3 class="kr-talk_speaker-name">Eoin Kelly</h3>
-        <p class="kr-talk_abstract">
-          'Hello, World!' is the first step of many a ruby journey. How much can we learn by going deep on everything it can teach us? Join me on a fun dive down through the stack as we go deep on everything from Strings, IO, Unix, the Ruby VM and x86 Assembler letting the simplest of programs be our guide.
-        </p>
-         <a class="kr-btn kr-btn--twitter" href="http://twitter.com/kiwirubyconf" target="_blank"><span>@kiwirubyconf</span></a>
-      </div>
-    </div>
-    
     <div class="kr-talk_item column column--3">
-      <div class="kr-card">
-        <img src="../img/speakers/eoin.jpg" class="kr-talk_speaker-photo"/>
+        <div class="kr-card">
 
-        <h2 class="kr-talk_title">Understanding 'Hello World'</h2>
-        <h3 class="kr-talk_speaker-name">Eoin Kelly</h3>
         <p class="kr-talk_abstract">
-          'Hello, World!' is the first step of many a ruby journey. How much can we learn by going deep on everything it can teach us? Join me on a fun dive down through the stack as we go deep on everything from Strings, IO, Unix, the Ruby VM and x86 Assembler letting the simplest of programs be our guide.
+            More speakers to be announced soon.
         </p>
-        <a class="kr-btn kr-btn--twitter" href="http://twitter.com/kiwirubyconf" target="_blank"><span>@kiwirubyconf</span></a>
+
       </div>
     </div>
 

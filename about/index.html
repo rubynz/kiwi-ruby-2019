@@ -15,9 +15,15 @@
     <meta content="https://kiwi.ruby.nz/" property="og:url" />
   
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/main.css?v=0.13">
+
+    
+    
+    <!--removeIf(live)-->
+    <base href="/">
+    <!-- endremoveIf(live)-->
+
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css?v=0.14">
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -47,42 +53,42 @@
 <header id="kr-header" class="kr-header--sub-page">
   <h1 class="kr-logo kr-logo--sub-page">
     <span class="hidden">Kiwi Ruby </span>
-    <a href="/">
-      <img src="../img/kiwi-ruby-logo.svg?v=0.1"/>
+    <a href="./">
+      <img src="./img/kiwi-ruby-logo.svg?v=0.1"/>
     </a>
   </h1>
 </header>
 
 
     <!-- build:banner-footer -->
+
     
     <input class="menu-checkbox" type="checkbox" id="menu" name="menu" />
     <label for="menu" class="menu">menu</label>
     <nav class="kr-nav u-wrapper-margins sticky-nav sticky" id="navbar" sticky="true">
         <ul class="row row--narrow row--center">
             <li class="kr-nav_item column column--0">
-                <a class="kr-nav_link" href="../about" tabindex="1" accesskey="a">About</a>
+                <a class="kr-nav_link" href="./about" tabindex="1" accesskey="a">About</a>
             </li>
             <li class="kr-nav_item column column--0">
-                <a class="kr-nav_link" href="../speakers" tabindex="2" accesskey="s">Speakers</a>
+                <a class="kr-nav_link" href="./speakers" tabindex="2" accesskey="s">Speakers</a>
+            </li>
+            
+            <li class="kr-nav_item column column--0">
+                <a class="kr-nav_link" href="./sponsors" tabindex="4" accesskey="p">Sponsors</a>
             </li>
             <li class="kr-nav_item column column--0">
-                <a class="kr-nav_link" href="../events" tabindex="3" accesskey="e">Events</a>
+                <a class="kr-nav_link" href="./childcare" tabindex="5" accesskey="c">Childcare</a>
             </li>
             <li class="kr-nav_item column column--0">
-                <a class="kr-nav_link" href="../sponsors" tabindex="4" accesskey="p">Sponsors</a>
-            </li>
-            <li class="kr-nav_item column column--0">
-                <a class="kr-nav_link" href="../childcare" tabindex="5" accesskey="c">Childcare</a>
-            </li>
-            <li class="kr-nav_item column column--0">
-                <a class="kr-nav_link" href="../diversity-scholarship" tabindex="6" accesskey="c">Diversity Scholarship</a>
-            </li>
+                <a class="kr-nav_link" href="./diversity-scholarship" tabindex="6" accesskey="c">Diversity Scholarship</a>            </li>
+            
         </ul>
         
     </nav>
+    
 
-    <section class="kr-content u-wrapper-margins">
+    <section class="kr-content kr-content--main u-wrapper-margins">
         
 <div class="row row--narrow row--small-column row--reverse-small">
 
@@ -105,8 +111,8 @@
         </p>
         <ul>
           <li>We have a <a href="http://ruby.nz/code-of-conduct" rel="noopener">code of conduct</a> in place. We will not tolerate harassment.</li>
-          <li>There will be <a href="/childcare/">childcare available onsite</a> at no cost to attendees.</li>
-          <li>There are <a href="/diversity-scholarship/">diversity scholarships</a> available to help people make it to the conference.</li><li>We have confirmed with the venue that the stage and audience are accessible to people with mobility impairments.</li>
+          <li>There will be <a href="./childcare/">childcare available onsite</a> at no cost to attendees.</li>
+          <li>There are <a href="./diversity-scholarship/">diversity scholarships</a> available to help people make it to the conference.</li><li>We have confirmed with the venue that the stage and audience are accessible to people with mobility impairments.</li>
           <li>There will be an audio loop available for people with hearing impairments.</li>
           <li>Unfortunately there are no gender-neutral toilets on site.</li></ul>
         <p>If you have any accessibility needs or concerns, please get in touch with us at <a href="mailto:kiwi@ruby.nz">kiwi@ruby.nz</a>.</p>
@@ -117,10 +123,10 @@
           Kiwi Ruby is a community event run by volunteers, overseen by Ruby New Zealand.
         </p>
         <p class="kr-content_para">
-          The organisers are Merrin Macleod, Raquel Moss, Rose Lu, Nahum Wild, and Philip Arndt. Between us, we have run Rails Camps, Rails Girls events, and local meetups for many years.
+            The organisers are Mathew Hartley, Ben Moskovitz, Natasha Dowse, Dave Harris, Katherine Nagels, and Merrin Macleod. Between us, we have a lot of experience in running Ruby and Rails events.
         </p>
         <p class="kr-content_para">
-          We thought it was time for New Zealand to have a Ruby conference, so we're making it happen.
+            The <a href="https://2017-kiwi.ruby.nz" target="_blank">first Kiwi Ruby conference</a> took place in November 2017, and we’re delighted to be presenting a second edition!
         </p>
         <p class="kr-content_para">
           We want to give the community the opportunity to learn and grow, and we want to showcase the talent we have right here in New Zealand.
@@ -142,21 +148,12 @@
             <h2 class="kr-content_title kr-content_title--sponsor">Kiwi Ruby wouldn't be possible without<br class="u-viewable--x-large"> the support of our friends.</h2>
             </div>
         </div>
+        
 
 
         <div class="row row--narrow row--small-column u-mt-30">
-            <div class="column column--3 kr-card kr-card--sponsor">
-                <div  class="kr-content_inner--sponsor">
-                    <h2 class="kr-details_title">Moa sponsor</h2>
-                    <a href="https://buildkite.com/" class="kr-sponsor-logo_link" target="_blank">
-                        <img src="../img/sponsors/buildkite-logo-small.png" class="kr-sponsor-logo"/>
-                    </a>
-                    <p class="kr-p--note u-mt-10">
-                        Lightning fast testing and delivery for all your software projects.
-                        Buildkite is a platform for running fast, secure, and scalable continuous integration pipelines on your own infrastructure.
-                    </p>
-                </div>
-            </div>
+            
+
             <div class="column column--6 u-mt-30">
                 <div class="row row--narrow">
                     <div  class="kr-content_inner--sponsor">
@@ -168,7 +165,7 @@
                         <div  class="kr-content_inner--sponsor">
                             
                             <a href="https://www.loyalty.co.nz" class="kr-sponsor-logo_link" target="_blank">
-                                <img src="../img/sponsors/loyalty-nz-logo.png" class="kr-sponsor-logo"/>
+                                <img src="./img/sponsors/loyalty-nz-logo.png" class="kr-sponsor-logo"/>
                             </a>
                             <p class="kr-p--note u-mt-10">
                                 Loyalty specialise in the clever use of data to help Kiwi businesses know more about their customers. Loyalty NZ is best known for the Fly Buys programme, New Zealand’s most loved loyalty programme.
@@ -178,10 +175,10 @@
                     <div class="column column--3">
                         <div  class="kr-content_inner--sponsor">
                             <a href="https://www.trineo.co.nz/" class="kr-sponsor-logo_link" target="_blank">
-                                <img src="../img/sponsors/trineo-logo.png" class="kr-sponsor-logo"/>
+                                <img src="./img/sponsors/trineo-logo.png" class="kr-sponsor-logo"/>
                             </a>
                             <p class="kr-p--note u-mt-10">
-                                Trineo are expert partners of Salesforce and Heroku, delivering integrated, custom solutions for global organizations.
+                                Trineo uses Ruby to build world-class app ecosystems on Heroku.  Our mission is to work in service of people and the planet. We hope you enjoy Kiwi Ruby!
                             </p>
                         </div>
                     </div>
@@ -200,7 +197,7 @@
             <div class="column column--3">
                 <div class="kr-content_inner--sponsor">
                     <a href="https://fluxfederation.com" class="kr-sponsor-logo_link" target="_blank">
-                        <img src="../img/sponsors/logo-flux.png" class="kr-sponsor-logo kr-sponsor-logo--secondary"/>
+                        <img src="./img/sponsors/logo-flux.png" class="kr-sponsor-logo kr-sponsor-logo--secondary"/>
                     </a>
                     <p class="kr-p--note u-mt-10">
                         Flux is a software platform that makes it easier for you to run your energy retail business end-to-end while unlocking opportunities to innovate.
@@ -210,7 +207,7 @@
             <div class="column column--3">
                 <div class="kr-content_inner--sponsor">
                     <a href="https://www.boost.co.nz/" class="kr-sponsor-logo_link" target="_blank">
-                        <img src="../img/sponsors/boost-logo-black-99e0cbb5.png" class="kr-sponsor-logo kr-sponsor-logo--secondary"/>
+                        <img src="./img/sponsors/boost-logo-black-99e0cbb5.png" class="kr-sponsor-logo kr-sponsor-logo--secondary"/>
                     </a>
                     <p class="kr-p--note u-mt-10">
                         Boost are a team of technology professionals designing and building web and mobile apps from our office in central Wellington.
@@ -219,14 +216,15 @@
             </div>
             <div class="column column--3">
                 <div class="kr-content_inner--sponsor">
-                    
+                 
                 </div>
             </div>
 
         </div>
+
     
     </section>
 
-    <script src="../js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+<!-- build:class -->sub<!-- /build:class -->
+<!-- build:title -->Speakers - Kiwi Ruby<!-- /build:title -->
+
+<!-- build:header -->
+<header id="kr-header" class="kr-header--sub-page">
+  <h1 class="kr-logo kr-logo--sub-page">
+    <span class="hidden">Kiwi Ruby </span>
+    <a href="./">
+      <img src="./img/kiwi-ruby-logo.svg?v=0.1"/>
+    </a>
+  </h1>
+</header>
+<!-- /build:header -->
+
+
+<!-- build:content -->
+
+{{#each people}}
+  {{#if this.julianna}}
+      <div class="row row--center-text">
+        <div class="column column--3">
+          <div class="kr-content_inner">
+              <h2 class="kr-content_title u-mt-10 u-mb-0">{{this.name}}</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row--narrow row--small-column u-mt-30">
+
+        <div class="column column--3">
+          <div class="kr-content_inner">
+            <div class="kr-card kr-talk_speaker-solo">
+              <img src="./img/speakers/speaker-{{this.link}}.jpg" class="kr-talk_speaker-photo"/>
+            </div>
+            <a class="kr-btn kr-btn--twitter" href="https://twitter.com/{{this.twitter}}" target="_blank"><span>@{{this.twitter}}</span></a>
+          </div>
+        </div>
+        
+        <div class="column column--6">
+          <div class="kr-content_inner">
+            <h2 class="kr-talk_title">{{this.title}}</h2>      
+
+            <p>
+                {{{this.shortDesc}}}
+            </p>
+
+            <h2 class="kr-talk_title u-mt-50">About {{this.name}}</h2>      
+            
+            <p>
+                {{{this.bio}}}
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+      <hr class="u-rule--ruby">
+    {{/if}}
+  {{/each}}
+<!-- /build:content -->

@@ -157,6 +157,9 @@ a {
     &--center {
         justify-content: center;
     }
+    &--center-text {
+        text-align: center;
+    }
 }
 .column {
     display: block;
@@ -411,15 +414,17 @@ body {
         font-size: 1em;
     }
 }
-
+.sub {
+    .kr-content--main {
+        padding-top: 70px;
+    }
+}
 .kr-content {
     background-color: $vanilla;
     color: $plum;
     margin: 0 10px;
     padding-bottom: 30px;
-    .sub & {
-        padding-top: 70px;
-    }
+
     .sub.sponsor & {
         background: $vanilla;
     }
@@ -471,8 +476,18 @@ body {
     }
     
 }
+.kr-talks {
+    display: flex;
+    @media only screen and (min-width: 667px){ 
+
+        flex-flow: column wrap;
+        max-height: 1900px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
 .kr-talk {
-    
     &_item {
         margin-bottom: 30px;
         @media only screen and (min-width: 667px){ 
@@ -483,16 +498,53 @@ body {
             padding-bottom: 2em;
         }
     }
+    &_title {
+        margin-top: 0.5em;
+    }
     &_speaker-photo {
-        max-width: 100%;
+        margin: -2em -2em 0;
+        max-width: calc(100% + 4em)
     }
     &_speaker-name {
+        margin-top: 1.5em;
         font-size: 1em;
     }
     &_abstract {
         font-size: 1em;
     }
-    
+    &_read-more {
+        font-family: 'Source Code Pro', monospace;
+        font-weight: 600;
+        display: block;
+    }
+    &_speaker-solo {
+        padding: 0;
+        margin-right: 0;
+        .kr-talk_speaker-photo {
+            margin: 0;
+            max-width: 100%;
+        }
+    }
+
+}
+.kr-speakers {
+    margin: 20px auto 0;
+    padding: 30px 60px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    &_item {
+        display: inline-block;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 10px -15px;
+    }
+    &_speaker-photo {
+        max-width: 100%;
+    }
+    &-detail {
+        text-align: center;
+    }
 }
 .kr-p {
     &--note {
@@ -611,6 +663,15 @@ body {
 }
 .u-mt-35 {
     margin-top: 35px;
+}
+.u-mt-50 {
+    margin-top: 50px;
+}
+.u-mt-60 {
+    margin-top: 60px;
+}
+.u-mt-70 {
+    margin-top: 70px;
 }
 
 .u-mb-0 {

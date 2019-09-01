@@ -8,7 +8,9 @@ fs = require("fs"),
 sourcemaps = require("gulp-sourcemaps"),
 browserSync = require("browser-sync").create(),
 removeCode = require('gulp-remove-code'),
-template = require('gulp-template-html');
+rename = require('gulp-rename'),
+compilehandlebars = require('gulp-compile-handlebars'),
+templateHtml = require('gulp-template-html');
 
 
 var paths = {
@@ -27,17 +29,17 @@ var paths = {
 	}
 };
 
-function templatify() {
-return gulp
-	.src(['content/**/*.html'])
-    .pipe(template('templates/template.html'))
-    .pipe(gulp.dest(paths.templates.cache));
-}
+var talks = require('./content/speakers/talks.json');
 
-function remover() {
+function generalTemplates() {
 return gulp
-	.src(paths.templates.cache+'/**/*.html')
-	.pipe(removeCode({ notlive: true }))
+    .src(['content/**/*.html'])
+    .pipe(compilehandlebars({people:talks}))
+    .pipe(rename(function(path) {
+        path.extname = '.html';
+    }))
+    .pipe(templateHtml('templates/template.html'))
+    .pipe(removeCode({ notlive: true }))
 	.pipe(gulp.dest('./'));
 }
 
@@ -78,8 +80,7 @@ gulp.watch(paths.styles.src, style);
 // We should tell gulp which files to watch to trigger the reload
 // This can be html or whatever you're using to develop your website
 // Note -- you can obviously add the path to the Paths object
-gulp.watch(paths.templates.src, templatify).on('change', browserSync.reload);
-gulp.watch(paths.templates.cache, remover).on('change', browserSync.reload);
+gulp.watch(paths.templates.src, generalTemplates).on('change', browserSync.reload);
 
 }
 
@@ -94,14 +95,12 @@ exports.watch = watch
 // This allows you to run it from the commandline using
 // $ gulp style
 exports.style = style;
-exports.remover = remover;
-exports.templatify = templatify;
 
 /*
 * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
 */
 
-var build = gulp.parallel(style, templatify, remover, watch);
+var build = gulp.parallel(style, generalTemplates, watch);
 
 /*
 * You can still use `gulp.task` to expose tasks

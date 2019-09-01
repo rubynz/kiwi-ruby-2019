@@ -15,9 +15,15 @@
     <meta content="https://kiwi.ruby.nz/" property="og:url" />
   
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/main.css?v=0.13">
+
+    
+    
+    <!--removeIf(live)-->
+    <base href="/">
+    <!-- endremoveIf(live)-->
+
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css?v=0.14">
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -47,42 +53,42 @@
 <header id="kr-header" class="kr-header--sub-page">
   <h1 class="kr-logo kr-logo--sub-page">
     <span class="hidden">Kiwi Ruby </span>
-    <a href="/">
-      <img src="../img/kiwi-ruby-logo.svg?v=0.1"/>
+    <a href="./">
+      <img src="./img/kiwi-ruby-logo.svg?v=0.1"/>
     </a>
   </h1>
 </header>
 
 
     <!-- build:banner-footer -->
+
     
     <input class="menu-checkbox" type="checkbox" id="menu" name="menu" />
     <label for="menu" class="menu">menu</label>
     <nav class="kr-nav u-wrapper-margins sticky-nav sticky" id="navbar" sticky="true">
         <ul class="row row--narrow row--center">
             <li class="kr-nav_item column column--0">
-                <a class="kr-nav_link" href="../about" tabindex="1" accesskey="a">About</a>
+                <a class="kr-nav_link" href="./about" tabindex="1" accesskey="a">About</a>
             </li>
             <li class="kr-nav_item column column--0">
-                <a class="kr-nav_link" href="../speakers" tabindex="2" accesskey="s">Speakers</a>
+                <a class="kr-nav_link" href="./speakers" tabindex="2" accesskey="s">Speakers</a>
+            </li>
+            
+            <li class="kr-nav_item column column--0">
+                <a class="kr-nav_link" href="./sponsors" tabindex="4" accesskey="p">Sponsors</a>
             </li>
             <li class="kr-nav_item column column--0">
-                <a class="kr-nav_link" href="../events" tabindex="3" accesskey="e">Events</a>
+                <a class="kr-nav_link" href="./childcare" tabindex="5" accesskey="c">Childcare</a>
             </li>
             <li class="kr-nav_item column column--0">
-                <a class="kr-nav_link" href="../sponsors" tabindex="4" accesskey="p">Sponsors</a>
-            </li>
-            <li class="kr-nav_item column column--0">
-                <a class="kr-nav_link" href="../childcare" tabindex="5" accesskey="c">Childcare</a>
-            </li>
-            <li class="kr-nav_item column column--0">
-                <a class="kr-nav_link" href="../diversity-scholarship" tabindex="6" accesskey="c">Diversity Scholarship</a>
-            </li>
+                <a class="kr-nav_link" href="./diversity-scholarship" tabindex="6" accesskey="c">Diversity Scholarship</a>            </li>
+            
         </ul>
         
     </nav>
+    
 
-    <section class="kr-content u-wrapper-margins">
+    <section class="kr-content kr-content--main u-wrapper-margins">
         
   <div class="row row--narrow row--small-column">
 
@@ -99,47 +105,98 @@
 
     </div>
     <div class="column column--3">
-  
     </div>
   </div>
-  <div class="row row--narrow row--small-column u-mt-30">
-    
+  <div class="kr-talks row row--narrow row--small-column u-mt-30">
+
     <div class="kr-talk_item column column--3">
       <div class="kr-card">
-        <img src="../img/speakers/eoin.jpg" class="kr-talk_speaker-photo"/>
+        <img src="./img/speakers/speaker-julianna.jpg" class="kr-talk_speaker-photo"/>
 
-        <h2 class="kr-talk_title">Understanding 'Hello World'</h2>
-        <h3 class="kr-talk_speaker-name">Eoin Kelly</h3>
+        <a class="kr-talk_read-more" href="./speakers/julianna">
+          <h3 class="kr-talk_speaker-name">Julianna Roen</h3>
+        </a>
+        <h2 class="kr-talk_title">Gusto &amp; Xero: 4 Offices, 2 Countries, 1 Massive Payroll Integration. </h2>
+        
         <p class="kr-talk_abstract">
-          'Hello, World!' is the first step of many a ruby journey. How much can we learn by going deep on everything it can teach us? Join me on a fun dive down through the stack as we go deep on everything from Strings, IO, Unix, the Ruby VM and x86 Assembler letting the simplest of programs be our guide.
+            I&#x27;ll share my journey of being part of this wild project and seeing it through from end to end.
         </p>
-         <a class="kr-btn kr-btn--twitter" href="http://twitter.com/kiwirubyconf" target="_blank"><span>@kiwirubyconf</span></a>
+         <a class="kr-talk_read-more" href="./speakers/julianna">Read more</a>
+         <a class="kr-btn kr-btn--twitter" href="https://twitter.com/juliannaroen" target="_blank"><span>@juliannaroen</span></a>
       </div>
     </div>
-    
     <div class="kr-talk_item column column--3">
       <div class="kr-card">
-        <img src="../img/speakers/eoin.jpg" class="kr-talk_speaker-photo"/>
+        <img src="./img/speakers/speaker-lena.jpg" class="kr-talk_speaker-photo"/>
 
-        <h2 class="kr-talk_title">Understanding 'Hello World'</h2>
-        <h3 class="kr-talk_speaker-name">Eoin Kelly</h3>
+        <a class="kr-talk_read-more" href="./speakers/lena">
+          <h3 class="kr-talk_speaker-name">Lena Plaksina</h3>
+        </a>
+        <h2 class="kr-talk_title">Just my type: things I learned from writing my own programming language</h2>
+        
         <p class="kr-talk_abstract">
-          'Hello, World!' is the first step of many a ruby journey. How much can we learn by going deep on everything it can teach us? Join me on a fun dive down through the stack as we go deep on everything from Strings, IO, Unix, the Ruby VM and x86 Assembler letting the simplest of programs be our guide.
+            I think that programming languages are not merely (or even mainly) a technical facility, but rather a social one, and want to draw on my experience of laying the foundations of my own Open Source programming language to hopefully convince you of the same!
         </p>
-         <a class="kr-btn kr-btn--twitter" href="http://twitter.com/kiwirubyconf" target="_blank"><span>@kiwirubyconf</span></a>
+         <a class="kr-talk_read-more" href="./speakers/lena">Read more</a>
+         <a class="kr-btn kr-btn--twitter" href="https://twitter.com/plaksina_lena" target="_blank"><span>@plaksina_lena</span></a>
       </div>
     </div>
-    
     <div class="kr-talk_item column column--3">
       <div class="kr-card">
-        <img src="../img/speakers/eoin.jpg" class="kr-talk_speaker-photo"/>
+        <img src="./img/speakers/speaker-rose.jpg" class="kr-talk_speaker-photo"/>
 
-        <h2 class="kr-talk_title">Understanding 'Hello World'</h2>
-        <h3 class="kr-talk_speaker-name">Eoin Kelly</h3>
+        <a class="kr-talk_read-more" href="./speakers/rose">
+          <h3 class="kr-talk_speaker-name">Rose Lu</h3>
+        </a>
+        <h2 class="kr-talk_title">Meet me behind the bike shed 🚲</h2>
+        
         <p class="kr-talk_abstract">
-          'Hello, World!' is the first step of many a ruby journey. How much can we learn by going deep on everything it can teach us? Join me on a fun dive down through the stack as we go deep on everything from Strings, IO, Unix, the Ruby VM and x86 Assembler letting the simplest of programs be our guide.
+            Once you put something in the world, you cannot control how the message changes for different people, or throughout time. This talk is about communication in general, rather than just bikeshedding.
         </p>
-        <a class="kr-btn kr-btn--twitter" href="http://twitter.com/kiwirubyconf" target="_blank"><span>@kiwirubyconf</span></a>
+         <a class="kr-talk_read-more" href="./speakers/rose">Read more</a>
+         <a class="kr-btn kr-btn--twitter" href="https://twitter.com/plainricedinner" target="_blank"><span>@plainricedinner</span></a>
+      </div>
+    </div>
+    <div class="kr-talk_item column column--3">
+      <div class="kr-card">
+        <img src="./img/speakers/speaker-michael.jpg" class="kr-talk_speaker-photo"/>
+
+        <a class="kr-talk_read-more" href="./speakers/michael">
+          <h3 class="kr-talk_speaker-name">Michael Dowse</h3>
+        </a>
+        <h2 class="kr-talk_title">What my toddler taught me about abstraction</h2>
+        
+        <p class="kr-talk_abstract">
+            Key lessons I&#x27;ve learned from observing my daughter Charlie as she spends her days trying to understand how the world works.
+        </p>
+         <a class="kr-talk_read-more" href="./speakers/michael">Read more</a>
+         <a class="kr-btn kr-btn--twitter" href="https://twitter.com/MichaelDowse" target="_blank"><span>@MichaelDowse</span></a>
+      </div>
+    </div>
+    <div class="kr-talk_item column column--3">
+      <div class="kr-card">
+        <img src="./img/speakers/speaker-nick.jpg" class="kr-talk_speaker-photo"/>
+
+        <a class="kr-talk_read-more" href="./speakers/nick">
+          <h3 class="kr-talk_speaker-name">Nick Johnstone</h3>
+        </a>
+        <h2 class="kr-talk_title">Your Browser on Ruby</h2>
+        
+        <p class="kr-talk_abstract">
+            This talk is about my quest to bring Ruby to the browser via WebAssembly. In it, I will introduce WebAssembly in a beginner-friendly way and explore the idea of alternative frontend languages, and walk through what&#x27;s involved in making that a reality.
+        </p>
+         <a class="kr-talk_read-more" href="./speakers/nick">Read more</a>
+         <a class="kr-btn kr-btn--twitter" href="https://twitter.com/widdnz" target="_blank"><span>@widdnz</span></a>
+      </div>
+    </div>
+
+    <div class="kr-talk_item column column--3">
+        <div class="kr-card">
+
+        <p class="kr-talk_abstract">
+            More speakers to be announced soon.
+        </p>
+
       </div>
     </div>
 
@@ -154,21 +211,12 @@
             <h2 class="kr-content_title kr-content_title--sponsor">Kiwi Ruby wouldn't be possible without<br class="u-viewable--x-large"> the support of our friends.</h2>
             </div>
         </div>
+        
 
 
         <div class="row row--narrow row--small-column u-mt-30">
-            <div class="column column--3 kr-card kr-card--sponsor">
-                <div  class="kr-content_inner--sponsor">
-                    <h2 class="kr-details_title">Moa sponsor</h2>
-                    <a href="https://buildkite.com/" class="kr-sponsor-logo_link" target="_blank">
-                        <img src="../img/sponsors/buildkite-logo-small.png" class="kr-sponsor-logo"/>
-                    </a>
-                    <p class="kr-p--note u-mt-10">
-                        Lightning fast testing and delivery for all your software projects.
-                        Buildkite is a platform for running fast, secure, and scalable continuous integration pipelines on your own infrastructure.
-                    </p>
-                </div>
-            </div>
+            
+
             <div class="column column--6 u-mt-30">
                 <div class="row row--narrow">
                     <div  class="kr-content_inner--sponsor">
@@ -180,7 +228,7 @@
                         <div  class="kr-content_inner--sponsor">
                             
                             <a href="https://www.loyalty.co.nz" class="kr-sponsor-logo_link" target="_blank">
-                                <img src="../img/sponsors/loyalty-nz-logo.png" class="kr-sponsor-logo"/>
+                                <img src="./img/sponsors/loyalty-nz-logo.png" class="kr-sponsor-logo"/>
                             </a>
                             <p class="kr-p--note u-mt-10">
                                 Loyalty specialise in the clever use of data to help Kiwi businesses know more about their customers. Loyalty NZ is best known for the Fly Buys programme, New Zealand’s most loved loyalty programme.
@@ -190,10 +238,10 @@
                     <div class="column column--3">
                         <div  class="kr-content_inner--sponsor">
                             <a href="https://www.trineo.co.nz/" class="kr-sponsor-logo_link" target="_blank">
-                                <img src="../img/sponsors/trineo-logo.png" class="kr-sponsor-logo"/>
+                                <img src="./img/sponsors/trineo-logo.png" class="kr-sponsor-logo"/>
                             </a>
                             <p class="kr-p--note u-mt-10">
-                                Trineo are expert partners of Salesforce and Heroku, delivering integrated, custom solutions for global organizations.
+                                Trineo uses Ruby to build world-class app ecosystems on Heroku.  Our mission is to work in service of people and the planet. We hope you enjoy Kiwi Ruby!
                             </p>
                         </div>
                     </div>
@@ -212,7 +260,7 @@
             <div class="column column--3">
                 <div class="kr-content_inner--sponsor">
                     <a href="https://fluxfederation.com" class="kr-sponsor-logo_link" target="_blank">
-                        <img src="../img/sponsors/logo-flux.png" class="kr-sponsor-logo kr-sponsor-logo--secondary"/>
+                        <img src="./img/sponsors/logo-flux.png" class="kr-sponsor-logo kr-sponsor-logo--secondary"/>
                     </a>
                     <p class="kr-p--note u-mt-10">
                         Flux is a software platform that makes it easier for you to run your energy retail business end-to-end while unlocking opportunities to innovate.
@@ -222,7 +270,7 @@
             <div class="column column--3">
                 <div class="kr-content_inner--sponsor">
                     <a href="https://www.boost.co.nz/" class="kr-sponsor-logo_link" target="_blank">
-                        <img src="../img/sponsors/boost-logo-black-99e0cbb5.png" class="kr-sponsor-logo kr-sponsor-logo--secondary"/>
+                        <img src="./img/sponsors/boost-logo-black-99e0cbb5.png" class="kr-sponsor-logo kr-sponsor-logo--secondary"/>
                     </a>
                     <p class="kr-p--note u-mt-10">
                         Boost are a team of technology professionals designing and building web and mobile apps from our office in central Wellington.
@@ -231,14 +279,15 @@
             </div>
             <div class="column column--3">
                 <div class="kr-content_inner--sponsor">
-                    
+                 
                 </div>
             </div>
 
         </div>
+
     
     </section>
 
-    <script src="../js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
