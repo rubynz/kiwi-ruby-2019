@@ -478,14 +478,6 @@ body {
 }
 .kr-talks {
     display: flex;
-    @media only screen and (min-width: 667px){ 
-
-        flex-flow: column wrap;
-        max-height: 1900px;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 100%;
-    }
 }
 .kr-talk {
     &_item {
