@@ -478,6 +478,7 @@ body {
 }
 .kr-talks {
     display: flex;
+    flex-wrap: wrap;
 }
 .kr-talk {
     &_item {
