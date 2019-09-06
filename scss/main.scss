@@ -232,13 +232,16 @@ body {
 
 .kr-card {
     background: white;
-    padding: 2em 2em 2.5em;
+    padding: 2em 1em 2.5em;
     box-shadow: 4px 4px 0px;
     margin-right: 2em;
     &--sponsor {
         margin-right: 0;
         padding-right: 0;
         padding-left: 0;
+    }
+    @media only screen and (min-width: 667px){ 
+        padding: 2em 2em 2.5em;
     }
 }
 
@@ -430,12 +433,21 @@ body {
     }
 
     &_inner {
-        padding: 2em;
+        padding: 2em 1em;
         padding-bottom: 0;
+        @media only screen and (min-width: 667px){ 
+            padding: 2em 2em;
+            padding-bottom: 0;
+        }
     }
     &_inner--sponsor {
-        padding: 0 2em;
+        padding: 0 1em;
         padding-bottom: 0;
+        @media only screen and (min-width: 667px){ 
+            padding: 0 2em;
+            padding-bottom: 0;
+        }
+        
     }
     &_title--sponsor {
         margin-top: -1.45em;
@@ -495,8 +507,12 @@ body {
         margin-top: 0.5em;
     }
     &_speaker-photo {
-        margin: -2em -2em 0;
-        max-width: calc(100% + 4em)
+        margin: -2em -1em 0;
+        max-width: calc(100% + 2em);
+        @media only screen and (min-width: 667px){ 
+            margin: -2em -2em 0;
+            max-width: calc(100% + 4em)
+        }
     }
     &_speaker-name {
         margin-top: 1.5em;
@@ -522,10 +538,13 @@ body {
 }
 .kr-speakers {
     margin: 20px auto 0;
-    padding: 30px 60px;
+    padding: 30px 30px;
     max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    @media only screen and (min-width: 667px){ 
+        padding: 30px 60px;
+    }
     &_item {
         display: inline-block;
         border-radius: 50%;
@@ -566,6 +585,40 @@ body {
     }
     &_description {
         font-size: 1em;
+    }
+}
+
+.kr-banner_tickets {
+    background: $plum;
+    color: #FFFFFF;
+    font-family: 'League Spartan Bold', sans-serif;
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    &-image {
+        height: 60px;
+        margin-top: -30px;
+        transform: rotate(-5deg) translateY(10px);
+        @media only screen and (min-width: 667px){ 
+            height: 114px;
+            margin-top: -57px;
+        }
+    }
+    &-message {
+        display: inline-flex;
+        padding: 0 10px;
+    }
+    &:before {
+        content: '';
+        background-color: rgba(0, 0, 0, 0.05);
+        height: 5px;
+        width: 100%;
+        flex: none;
+        position: absolute;
+        left: 0;
+        top: -5px;
     }
 }
 
