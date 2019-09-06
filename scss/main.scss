@@ -598,10 +598,12 @@ body {
     left: 0;
     right: 0;
     &-image {
+        display: none;
         height: 60px;
         margin-top: -30px;
         transform: rotate(-5deg) translateY(10px);
         @media only screen and (min-width: 667px){ 
+            display: inline-block;
             height: 114px;
             margin-top: -57px;
         }
@@ -609,6 +611,10 @@ body {
     &-message {
         display: inline-flex;
         padding: 0 10px;
+        font-size: 0.8em;
+        @media only screen and (min-width: 667px){ 
+            font-size: 1em;
+        }
     }
     &:before {
         content: '';
