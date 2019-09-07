@@ -32,6 +32,7 @@ var paths = {
 var talks = require('./content/speakers/talks.json');
 
 function generalTemplates() {
+
 return gulp
     .src(['content/**/*.html'])
     .pipe(compilehandlebars({people:talks}))

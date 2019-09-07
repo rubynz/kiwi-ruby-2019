@@ -1,6 +1,6 @@
 [{
   "name": "Eumir Gaspar",
-  "bio": "I'm a senior Ruby developer from the Philippines. I have been an active part of the Ruby community there -  I have worked as the RubyConf PH website maintainer for a few years. I have since moved to Perth to work with Rent.com.au as the lead developer and the CTO and co-founder of Beanbag Entertainment. I also mentor people on the side via exercism.io and some boot camp websites as part of paying it forward back when I was mentored by one of my former bosses.",
+  "bio": "I'm a senior Ruby developer from the Philippines. I have been an active part of the Ruby community there -  I have worked as the RubyConf PH website maintainer for a few years. I have since moved to Perth to work with <a href=\"http://rent.com.au\" target=\"_blank\">Rent.com.au</a> as the lead developer and the CTO and co-founder of Beanbag Entertainment. I also mentor people on the side via exercism.io and some boot camp websites as part of paying it forward back when I was mentored by one of my former bosses.",
   "title": "CRAYGO: Clean Ruby As You Go",
   "shortDesc": "This talk is all about improving and cleaning up your legacy code base and eventually pay off all (if not most) of your technical debts.",
   "description": "This talk is all about improving and cleaning up your legacy code base and eventually pay off all (if not most) of your technical debts. Still stuck with Rails 3 or 4? There are ways to move forward even with \"old\" code bases like yours! In this talk, we will talk about how to roll forward with new features using toggles, slowly replacing old modules, migrating / deleting unused tables, slowly moving to a Javascript frontend - all while maintaining your old monolith! How fun!\r\n\r\nSome of these are based on actual anecdotes and solutions that are currently live at the moment. Some are ongoing works and plans as we move forward and deliver new features each day. So strap on your wellies as we will be sludging through some muck and hopefully emerge with cleaner and prettier codebases. ",
@@ -8,11 +8,11 @@
   "picture": "./img/speakers/speaker-eumir.jpg",
   "tags": ["ruby", "rails", "refactoring", "maintaing code,"],
   "link" : "eumir",
-  "live": false,
+  "live": true,
   "eumir": true
   }, {
   "name": "Julian Doherty",
-  "bio": "Julian is a senior developer with 20 years experience, and has been hacking on Ruby for the last 12.\r\n\r\nOriginally from Wellington, New Zealand, he now calls Melbourne home. Currently working at Envato, he has spent time at some of the biggest Rails shops in Australia. Julian also runs the Elixir Melbourne meetup group, and tries to spend as much time as possible inflicting functional programming paradigms on codebases he works in.",
+  "bio": "Julian is a senior developer with 20 years experience, and has been hacking on Ruby for the last 12.<br><br>Originally from Wellington, New Zealand, he now calls Melbourne home. Currently working at Envato, he has spent time at some of the biggest Rails shops in Australia. Julian also runs the Elixir Melbourne meetup group, and tries to spend as much time as possible inflicting functional programming paradigms on codebases he works in.",
   "title": "Cool Functional Tricks In Ruby",
   "shortDesc": "We'll have a look at some of the lesser known functional programming approaches you can use in Ruby.",
   "description": "We'll have a look at some of the lesser known functional programming approaches you can use in Ruby. Although Ruby is mostly about OO programming, there are many FP concepts buried in there to leverage. Sometimes for better code, sometimes just because you can and it's fun. We'll dig into what the language gives you, what's in the stdlib, and what tortured constructs you can cook up with some good old fashioned Ruby metaprogramming.\r\n\r\nThings like: higher order functions; pattern matching; immutability; statelessness; and like any good FP talk, there will even be some talk of monads.",
@@ -20,7 +20,7 @@
   "picture": "./img/speakers/speaker-julian.jpg",
   "tags": ["ruby", "functional programming"],
   "link" : "julian",
-  "live": false,
+  "live": true,
   "julian": true
   }, {
   "name": "Pete Nicholls",
@@ -32,20 +32,20 @@
   "picture": "./img/speakers/speaker-pete.jpg",
   "tags": ["ethics"],
   "link" : "pete",
-  "live": false,
+  "live": true,
   "pete": true
   }, {
-  "name": "Shaun O'Connell",
-  "bio": "I'm a seasoned front-end developer, and built my first site in 1997, back when marquee was high-tech, and nested tables were all the rage.\r\nSince then I've dabbled as a UX researcher and interaction designer, but my core love is for working with HTML, CSS, JavaScript and all the peripheral elements of the web. Open source stacks are a great environment to work within, and Ruby (Rails, Middleman) is no exception.\r\nI moved to Wellington 5 years ago, after attending Webstock 2014, and now work at Flick Electric Co. Here I helped implement Flick's first Design System alongside some great people like Sophie Price, and Kah Chan.",
+  "name": "Shaun O'Connell & Sophie Price",
+  "bio": "I'm a seasoned front-end developer, and built my first site in 1997, back when marquee was high-tech, and nested tables were all the rage.<br><br>Since then I've dabbled as a UX researcher and interaction designer, but my core love is for working with HTML, CSS, JavaScript and all the peripheral elements of the web. Open source stacks are a great environment to work within, and Ruby (Rails, Middleman) is no exception.<br><br>I moved to Wellington 5 years ago, after attending Webstock 2014, and now work at Flick Electric Co. Here I helped implement Flick's first Design System alongside some great people like Sophie Price, and Kah Chan.",
   "title": "FEDUP at Flick",
   "shortDesc": "How flick is replacing the 'move fast and break things' mindset with one built on pattern libraries, high-quality code, and a passion for design systems.",
   "description": "### The setting\r\n\r\nWe're at an interesting point in Flick Electric's life, where the company is gradually shedding its young ways, and becoming a more mature company. We're replacing the 'move fast and break things' mindset with one focused on producing higher-quality code, code that is more readable, and reliable.\r\n\r\n### It's about the UI, and UX\r\n\r\nThe user interfaces within the Flick Experience are no different. This is where Sophie and Shaun come in.\r\nWhile our dev team struggles with a micro-services architecture we've inherited, we (the product design team) can make our Ruby developer's lives easier, by preparing tools and documentation for them, while also helping our product managers communicate the work involved by producing research-tested, high-fidelity, and consistent wireframes that are easy to translate into functional UIs.\r\n\r\n### Scaling up product development\r\n\r\nHow do two people scale up and help 15 or so of their colleagues with all the front-end work?\r\nWell, we think in patterns. We work with the mediums that we're effective with, in this case HTML and CSS. So, we built a pattern library, and it became our multiplier. It sucks in experience, cross-browser testing, prototyping, and some YAML. It then spits out documentation, HTML, and all the assets you need to succeed.\r\n\r\nYou've heard about pattern libraries before, but ours is a little different. We built it from scratch so that it can scratch our itches, and we love working with it.\r\n\r\n### Take aways\r\n\r\nAs with most systems, it's the people-driven aspects within those systems that are the most challenging. We'll share some of those challenges and how we solved them. We'll also share our passion for design systems: we think their efficacy goes beyond just hammering out designs and front-end code.\r\n\r\nThank you!\r\n-Shaun & Sophie",
   "twitter": "ndorfin",
-  "picture": "./img/speakers/speaker-shaun.jpg",
+  "picture": "./img/speakers/speaker-shaun-and-sophie.jpg",
   "tags": ["front-end development", "Middleman", "Static-site generators", "Design systems", "pattern libraries", "Asset Gems", "Distributed UI", "product design", "HTML", "CSS", "YAML", "JavaScript", "Documentation"],
-  "link" : "shaun",
-  "live": false,
-  "shaun": true
+  "link" : "shaun-and-sophie",
+  "live": true,
+  "shaun-and-sophie": true
   }, {
   "name": "Julianna Roen",
   "bio": "Julianna is a Ruby and JavaScript developer based out of New York. She works at Gusto — a payroll, benefits, and HR solution for small businesses in the US. She loves writing, making people laugh, trying to look cool on Instagram, and taking trips to New Zealand to spend time with her JAFA boyfriend.",
@@ -60,7 +60,7 @@
   "julianna": true
   }, {
   "name": "Erin Belot",
-  "bio": "Hello! I'm Erin, I'm Australian and a bit of a career changer. I used to work for The Royal Flying Doctors in Darwin but when I moved back home I found there wasn't much work needed so I got into tech. I love the problem solving and really nice code. I probably like nice code too much and need to chill out a bit and crack on with work, but I haven't found that balance yet. I'd love to be able to give a talk on what I've learnt about fixing big ol' bugs :)\r\n\r\n",
+  "bio": "Hello! I'm Erin, I'm Australian and a bit of a career changer. I used to work for The Royal Flying Doctors in Darwin but when I moved back home I found there wasn't much work needed so I got into tech. I love the problem solving and really nice code. I probably like nice code too much and need to chill out a bit and crack on with work, but I haven't found that balance yet. I'd love to be able to give a talk on what I've learnt about fixing big ol' bugs :)",
   "title": "How to fix a bug in a monolith",
   "shortDesc": "She's a bit of a nutter and will probably try to release some bugs into the audience. But she's the best there is at getting those big ol' bugs back into the wild where they belong.",
   "description": "Beekeeper Betty will take you on a journey to fix a sickly monolith. She's a bit of a nutter and will probably try to release some bugs into the audience. But she's the best there is at getting those big ol' bugs back into the wild where they belong. She's got a step by step process and some handy tools like Gitlens and Heatmap to aid her on her way. She's very thorough, she thinks about lots of different things. Like is this a case that doesn't need a coding solution? Or what risks might this new code introduce? Just be wary that she hasn't hidden some creepy crawlies or spiders under your seat! ",
@@ -68,7 +68,7 @@
   "picture": "./img/speakers/speaker-erin.jpg",
   "tags": ["Ruby", "Rails", "Bugs", "Gitlens", "Heatmap"],
   "link" : "erin",
-  "live": false,
+  "live": true,
   "erin": true
   }, {
   "name": "Lena Plaksina",
@@ -96,7 +96,7 @@
   "rose": true
   }, {
   "name": "Michael Dowse",
-  "bio": "I've been working with Ruby for about 10 years. I've worked across domains such as language learning, electricity pricing, and tax and each time I've been tasked with solving specific problems in a generalisable way.\r\n\r\nCurrently I'm CTO at Hnry - the financial sidekick for contractors and freelancers. I live in Wellington with my 4 year old daughter who is the subject of this talk.",
+  "bio": "I've been working with Ruby for about 10 years. I've worked across domains such as language learning, electricity pricing, and tax and each time I've been tasked with solving specific problems in a generalisable way.<br><br>Currently I'm CTO at Hnry - the financial sidekick for contractors and freelancers. I live in Wellington with my 4 year old daughter who is the subject of this talk.",
   "title": "What my toddler taught me about abstraction",
   "shortDesc": "Key lessons I've learned from observing my daughter Charlie as she spends her days trying to understand how the world works.",
   "description": "Abstractions are one of our key tools to make sense of incomprehensibly complex environments. They're mental models that we create by observation, that then allow us to take shortcuts when we encounter new situations.\r\n\r\nWe do this all the time in software development and yet somehow we often seem to get it wrong. Who hasn't found themselves battling a codebase that seems hell bent on not supporting the new feature that's required?\r\n\r\nI've spent the last few years observing my daughter Charlie as she spends her days trying to understand how the world works. It’s a hard job, there’s a lot of complexity to understand, and some of it is really hard to make sense of.\r\n\r\nEvery day she conceptualises abstractions and then chooses the correct one. Often she gets it wrong, and has to change her abstraction as she learns more about the world around her.\r\n\r\nHer challenges and mistakes are not so different to those we face in building software, and watching her has led me to reevaluate some of the choices I've been making. This talk will cover a few of the key lessons that I've learned.",
@@ -108,7 +108,7 @@
   "michael": true
   }, {
   "name": "Nick Johnstone",
-  "bio": "I love making stuff with computers, especially tools that help other people express themselves, understand or improve the world.\r\n\r\nI'm always interested in learning more about what we can achieve with computers, and I love sharing that knowledge around.\r\n\r\nWhen I'm not doing that, I enjoy cycling, video games, playing the piano poorly and going for walks.",
+  "bio": "I love making stuff with computers, especially tools that help other people express themselves, understand or improve the world.<br><br>I'm always interested in learning more about what we can achieve with computers, and I love sharing that knowledge around.When I'm not doing that, I enjoy cycling, video games, playing the piano poorly and going for walks.",
   "title": "Your Browser on Ruby",
   "shortDesc": "This talk is about my quest to bring Ruby to the browser via WebAssembly. In it, I will introduce WebAssembly in a beginner-friendly way and explore the idea of alternative frontend languages, and walk through what's involved in making that a reality.",
   "description": "This talk is about my quest to bring Ruby to the browser via WebAssembly. In it, I will introduce WebAssembly in a beginner-friendly way and explore the idea of alternative frontend languages, and walk through what's involved in making that a reality.\r\n\r\nMy aim is that the audience will come away with a good understanding of what WebAssembly is, how it might impact the future landscape of our technologies, and ideally feel inspired to explore alternative languages such as Ruby for powering their frontends.",

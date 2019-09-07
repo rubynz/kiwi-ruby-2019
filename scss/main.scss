@@ -394,8 +394,8 @@ body {
         text-align: center;
         white-space: nowrap;
         padding: 10px 20px;
+        cursor: pointer;
     }
-
 }
 .kr-banner_footer {
     display: block;
@@ -494,6 +494,7 @@ body {
 }
 .kr-talk {
     &_item {
+        position: relative;
         margin-bottom: 30px;
         @media only screen and (min-width: 667px){ 
             flex-basis: 33%;
@@ -544,6 +545,10 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     @media only screen and (min-width: 667px){ 
         padding: 30px 60px;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    @media only screen and (min-width: 1200px){ 
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     }
     &_item {
         display: inline-block;
