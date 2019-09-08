@@ -51,6 +51,7 @@ hr {
     padding: 0;
 }
 
+
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
@@ -114,6 +115,9 @@ $plum : #d60a51;
 $vanilla : #ffe9c8;
 $vanillaLight : #fff1de;
 
+.plum {
+    border-top: 1px solid #f2c98c;
+}
 
 h2, h3 {
     font-family: 'Source Code Pro', monospace;
@@ -657,6 +661,9 @@ body {
             margin-right: 10px;
         }
     }
+    &--center {
+        text-align: center;
+    }
 }
 
  /* ==========================================================================
@@ -683,6 +690,9 @@ body {
         display: none;
         @media only screen and (min-width: 667px){
             display: block;
+            &.kr-btn {
+                display: inline-block;
+            }
         }
     }
     &--x-large {
@@ -733,6 +743,12 @@ body {
 
 .u-mb-0 {
     margin-bottom: 0;
+}
+.u-mb-20 {
+    margin-bottom: 20px;
+}
+.u-mb-30 {
+    margin-bottom: 30px;
 }
 
 .u-wrapper-margins {
