@@ -16,9 +16,9 @@
   
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--removeIf(live)-->
+    <!--removeIf(dev)-->
     <base href="https://kiwi.ruby.nz/">
-    <!-- endremoveIf(live)-->
+    <!-- endremoveIf(dev)-->
     
 
     <link rel="stylesheet" href="./css/normalize.css">
@@ -73,7 +73,11 @@
             <li class="kr-nav_item column column--0">
                 <a class="kr-nav_link" href="./speakers" tabindex="2" accesskey="s">Speakers</a>
             </li>
-            
+            <!--removeIf(notlive)-->
+            <li class="kr-nav_item column column--0">
+                <a class="kr-nav_link" href="./events" tabindex="3" accesskey="e">Events</a>
+            </li>
+            <!-- endremoveIf(notlive)-->
             <li class="kr-nav_item column column--0">
                 <a class="kr-nav_link" href="./sponsors" tabindex="4" accesskey="p">Sponsors</a>
             </li>
@@ -121,7 +125,13 @@
             <h2 class="kr-talk_title u-mt-50">About Shaun O'Connell</h2>      
             
             <p>
-                I'm a seasoned front-end developer, and built my first site in 1997, back when marquee was high-tech, and nested tables were all the rage.<br><br>Since then I've dabbled as a UX researcher and interaction designer, but my core love is for working with HTML, CSS, JavaScript and all the peripheral elements of the web. Open source stacks are a great environment to work within, and Ruby (Rails, Middleman) is no exception.<br><br>I moved to Wellington 5 years ago, after attending Webstock 2014, and now work at Flick Electric Co. Here I helped implement Flick's first Design System alongside some great people like Sophie Price, and Kah Chan.
+                I'm a seasoned front-end developer, and built my first site in 1997, back when marquee was high-tech, and nested tables were all the rage.<br>Since then I've dabbled as a UX researcher and interaction designer, but my core love is for working with HTML, CSS, JavaScript and all the peripheral elements of the web. Open source stacks are a great environment to work within, and Ruby (Rails, Middleman) is no exception.<br><br>I moved to Wellington 5 years ago, after attending Webstock 2014, and now work at Flick Electric Co. Here I helped implement Flick's first Design System alongside some great people like Sophie Price, and Kah Chan.
+            </p>
+
+            <h2 class="kr-talk_title u-mt-50">About Sophie Price</h2>      
+            
+            <p>
+                I'm a product designer who's really passionate about UX, however I enjoy spending a fair bit of time getting my hands dirty with front-end code. I've been at Flick since October last year, after completing my Masters in Design Innovation at Victoria. At Flick I've continued my healthy obsession with design systems that began during an internship at Trade Me in 2016-17.<br><br> Outside of work you'll find me at the climbing wall, or outside bouldering when the wild Welly weather permits!
             </p>
 
           </div>

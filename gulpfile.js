@@ -10,7 +10,8 @@ browserSync = require("browser-sync").create(),
 removeCode = require('gulp-remove-code'),
 rename = require('gulp-rename'),
 compilehandlebars = require('gulp-compile-handlebars'),
-templateHtml = require('gulp-template-html');
+templateHtml = require('gulp-template-html'),
+gutil = require('gulp-util');;
 
 
 var paths = {
@@ -31,7 +32,9 @@ var paths = {
 
 var talks = require('./content/speakers/talks.json');
 
-function generalTemplates() {
+function generalTemplates(env) {
+
+rcOptions = (gutil.env.env === 'dev') ? { dev: true, live: false } : { dev: false, live: true }
 
 return gulp
     .src(['content/**/*.html'])
@@ -40,7 +43,7 @@ return gulp
         path.extname = '.html';
     }))
     .pipe(templateHtml('templates/template.html'))
-    .pipe(removeCode({ notlive: true }))
+    .pipe(removeCode(rcOptions))
 	.pipe(gulp.dest('./'));
 }
 
