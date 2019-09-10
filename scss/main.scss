@@ -468,6 +468,9 @@ body {
             font-size: 2.5em;
         }
     }
+    &_para {
+        max-width: 600px;
+    }
     &_feature-img {
         display: block;
         position: absolute;
@@ -649,6 +652,11 @@ body {
     &:before, span {
         vertical-align: middle;
     }
+    &--block {
+        text-align: center;
+        padding: 15px 10px;
+        display: block;
+    }
     &--twitter {
         &:before {
             content: '';
@@ -692,6 +700,9 @@ body {
             display: block;
             &.kr-btn {
                 display: inline-block;
+                &--block {
+                    display: block;
+                }
             }
         }
     }
