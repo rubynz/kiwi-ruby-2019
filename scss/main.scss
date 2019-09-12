@@ -241,8 +241,8 @@ body {
     margin-right: 2em;
     &--sponsor {
         margin-right: 0;
-        padding-right: 0;
-        padding-left: 0;
+        padding-right: 0!important;
+        padding-left: 0!important;
     }
     @media only screen and (min-width: 667px){ 
         padding: 2em 2em 2.5em;
@@ -730,6 +730,11 @@ body {
     margin: 0 auto;
     border-top: 80px solid transparent;
     border-bottom: 80px solid transparent;
+}
+
+.u-mh-10 {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .u-mt-0 {
