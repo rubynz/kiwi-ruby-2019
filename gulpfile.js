@@ -11,8 +11,8 @@ removeCode = require('gulp-remove-code'),
 rename = require('gulp-rename'),
 compilehandlebars = require('gulp-compile-handlebars'),
 templateHtml = require('gulp-template-html'),
-gutil = require('gulp-util');;
-
+gutil = require('gulp-util'),
+del = require('del');
 
 var paths = {
 	styles: {
@@ -27,7 +27,11 @@ var paths = {
 		src: ['content/**/*.html', 'templates/**/*.html'],
 		cache: 'cache',
 		dest: './'
-	}
+    },
+    notProd: {
+        src: ['schedule'],
+        srcContent: '!content/schedule/**/*'
+    }
 };
 
 var talks = require('./content/speakers/talks.json');
@@ -36,8 +40,15 @@ function generalTemplates(env) {
 
 rcOptions = (gutil.env.env === 'dev') ? { dev: true, live: false } : { dev: false, live: true }
 
+
+if (gutil.env.env === 'prod') {
+    notProdTemplates = ['content/**/*.html', paths.notProd.srcContent];
+} else {
+    notProdTemplates = ['content/**/*.html'];
+}
+
 return gulp
-    .src(['content/**/*.html'])
+    .src( notProdTemplates)
     .pipe(compilehandlebars({people:talks}))
     .pipe(rename(function(path) {
         path.extname = '.html';
@@ -88,6 +99,14 @@ gulp.watch(paths.templates.src, generalTemplates).on('change', browserSync.reloa
 
 }
 
+function cleaner() {
+    if (gutil.env.env === 'prod' ? true : false) {
+        return del(paths.notProd.src, {force:true});
+    } else {
+        return del('!speakers')
+    }
+};
+
 // We don't have to expose the reload function
 // It's currently only useful in other functions
 
@@ -99,12 +118,16 @@ exports.watch = watch
 // This allows you to run it from the commandline using
 // $ gulp style
 exports.style = style;
+exports.cleaner = cleaner;
+
 
 /*
 * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
 */
 
-var build = gulp.parallel(style, generalTemplates, watch);
+var build = gulp.series(cleaner, gulp.parallel(style, generalTemplates, watch));
+
+
 
 /*
 * You can still use `gulp.task` to expose tasks
