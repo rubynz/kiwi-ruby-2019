@@ -44,7 +44,10 @@ var hasScrolled = false;
     
         var pastEls = document.getElementsByClassName("kr-schedule_item"),
         thisPos = 0.
-        thisHash = '';
+        thisHash = '',
+        now = Date.now(),
+        overDate = null,
+        thisDate = null;
 
         if(!pastEls.length){
             return false;
@@ -56,17 +59,24 @@ var hasScrolled = false;
                 return false;
             }
 
-            var now = Date.now(),
             thisDate = Date.parse(pastEls[i].getAttribute("past"));
 
             if (now >= thisDate) {
                 pastEls[i].classList.add("kr-schedule_item--past");
                 thisPos = pastEls[i].offsetTop,
                 thisHash = pastEls[i].id;
-                console.log('thisHash: '+thisHash)
             } 
 
+            overDate = pastEls[i].getAttribute("over") ? Date.parse(pastEls[i].getAttribute("over")) : null;
+
         }
+
+
+        if(now >= overDate){
+            document.body.classList.add("kr-over");
+            return false;
+        }
+
         if (!hasScrolled) {
             setTimeout( function(){
                 window.scrollTo(0, thisPos);
