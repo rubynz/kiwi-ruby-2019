@@ -11,7 +11,7 @@ var paraEls = document.getElementsByClassName("kr-paralax"),
 
     for (i = 0; i < paraEls.length; i++) {
         if(paraEls[i].getAttribute("paralax") == null){
-        return false;
+            return false;
         }
         paraEls[i].style.transform = "translate(0, "+parseInt(offset * -(paraEls[i].getAttribute("paralax")))+"px)";
     }
@@ -36,3 +36,45 @@ var navbar = document.getElementById("navbar"),
     window.addEventListener("resize", function(){
         navOffset = navbar.offsetTop;
     });
+
+
+var hasScrolled = false;
+
+    function scheduleUpdate() {
+    
+        var pastEls = document.getElementsByClassName("kr-schedule_item"),
+        thisPos = 0.
+        thisHash = '';
+
+        if(!pastEls.length){
+            return false;
+        }
+
+        for (i = 0; i < pastEls.length; i++) {
+
+            if(pastEls[i].getAttribute("past") == null){
+                return false;
+            }
+
+            var now = Date.now(),
+            thisDate = Date.parse(pastEls[i].getAttribute("past"));
+
+            if (now >= thisDate) {
+                pastEls[i].classList.add("kr-schedule_item--past");
+                thisPos = pastEls[i].offsetTop,
+                thisHash = pastEls[i].id;
+                console.log('thisHash: '+thisHash)
+            } 
+
+        }
+        if (!hasScrolled) {
+            setTimeout( function(){
+                window.scrollTo(0, thisPos);
+                if (thisHash) window.location.hash = '#'+thisHash;
+                hasScrolled = true;
+            }, 200);
+        }
+
+    }
+    scheduleUpdate();
+    setInterval(scheduleUpdate, 60*1000);

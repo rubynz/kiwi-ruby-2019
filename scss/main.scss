@@ -122,12 +122,24 @@ $vanillaLight : #fff1de;
 h2, h3 {
     font-family: 'Source Code Pro', monospace;
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    @media only screen and (min-width: 667px){
+        font-size: 1.2em;
+    }
+}
+h4 {
+    font-size: 0.9em;
+    @media only screen and (min-width: 667px){
+        font-size: 1em;
+    }
 }
 p {
     font-family: 'Source Code Pro', monospace;
     font-weight: 400;
-    font-size: 1.1em;
+    font-size: 1em;
+    @media only screen and (min-width: 667px){
+        font-size: 1.1em;
+    }
 }
 ul {
     font-family: 'Source Code Pro', monospace;
@@ -246,7 +258,7 @@ body {
     }
     &--collapse {
         padding: 0!important;
-        margin-right: 0.5em; 
+        margin: 0 -0.5em;
     }
     @media only screen and (min-width: 667px){ 
         padding: 2em 2em 2.5em;
@@ -255,12 +267,25 @@ body {
 
 .kr-schedule {
     &_item {
-
+        p {
+            @media only screen and (min-width: 667px){
+                max-width: 710px;
+                padding-right: 50px;
+            }
+        }
         &:first-child {
-            padding-top: 60px;
+            padding-top: 30px;
         }
         &:last-child {
-            padding-bottom: 60px;
+            padding-bottom: 30px;
+        }
+        @media only screen and (min-width: 667px){
+            &:first-child {
+                padding-top: 60px;
+            }
+            &:last-child {
+                padding-bottom: 60px;
+            }
         }
         &--interval {
             color: #666666;
@@ -271,7 +296,6 @@ body {
             & ~ .kr-schedule_item--past {
                 border-top: 8px solid #efefef;
                 margin-top: -8px;
-                margin-bottom: 20px;
             }
             & + .kr-schedule_item:not(.kr-schedule_item--past) {
                 margin-top: 20px;
@@ -280,16 +304,20 @@ body {
 
     }
     &_item-inner {
-        padding: 30px 40px;
-         flex-direction: column;
-        @media only screen and (min-width: 667px){ 
+        padding: 15px 1em;
+        flex-direction: column;
+        @media only screen and (min-width: 667px){
+            padding: 30px 2em;
             flex-direction: row;
-        }    
+        }
     }
     &_title {
         font-family: 'League Spartan Bold', sans-serif;
-        font-size: 1.5em;
+        font-size: 1.2em;
         margin-top: 0; 
+        @media only screen and (min-width: 667px){
+            font-size: 1.5em;
+        }
     }
     &_talk-title {
         font-family: 'Source Code Pro', monospace;
@@ -561,11 +589,21 @@ body {
         position: relative;
         margin-bottom: 30px;
         @media only screen and (min-width: 667px){ 
+            flex-basis: 50%;
+            max-width: 50%;
+        }
+        @media only screen and (min-width: 1000px){ 
             flex-basis: 33%;
             max-width: 33%;
         }
         .kr-content_inner {
             padding-bottom: 2em;
+        }
+        .kr-card {
+            margin: 0 0.5em;
+            @media only screen and (min-width: 667px){ 
+                margin: 0 0.75em;
+            }
         }
     }
     &_title {
@@ -790,10 +828,13 @@ body {
 .u-rule--squiggle {
     height: 10px;
     max-width: 150px;
-    margin: 60px 0 0;
+    margin: 40px 0 0;
     border: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='145.4' height='8'%3E%3Cpath d='M143.4 6c-4.2 0-4.2-4-8.3-4-4.2 0-4.2 4-8.3 4-4.2 0-4.2-4-8.3-4-4.2 0-4.2 4-8.3 4-4.2 0-4.2-4-8.3-4-4.2 0-4.2 4-8.3 4-4.2 0-4.2-4-8.3-4C81 2 81 6 76.9 6c-4.2 0-4.2-4-8.3-4-4.2 0-4.2 4-8.3 4S56.1 2 52 2c-4.2 0-4.2 4-8.3 4-4.2 0-4.2-4-8.3-4-4.2 0-4.2 4-8.3 4-4.2 0-4.2-4-8.3-4-4.2 0-4.2 4-8.3 4S6.2 2 2 2' fill='none' stroke='%23d60a51' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
+    @media only screen and (min-width: 667px){
+        margin: 60px 0 0;
+    }
 }
 
 .u-mh-10 {

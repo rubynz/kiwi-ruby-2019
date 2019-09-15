@@ -48,8 +48,20 @@ if (gutil.env.env === 'prod') {
 }
 
 return gulp
-    .src( notProdTemplates)
-    .pipe(compilehandlebars({people:talks}))
+    .src( notProdTemplates )
+    .pipe(compilehandlebars({
+        people:talks, 
+        eumir:talks[0],
+        julian:talks[1],
+        pete:talks[2],
+        shaun:talks[3],
+        julianna:talks[4],
+        erin:talks[5],
+        lena:talks[6],
+        rose:talks[7],
+        michael:talks[8],
+        nick:talks[9]
+    }))
     .pipe(rename(function(path) {
         path.extname = '.html';
     }))
