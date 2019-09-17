@@ -61,9 +61,9 @@
   "julianna": true
   }, {
   "name": "Erin Belot",
-  "bio": "Hello! I'm Erin, I'm Australian and a bit of a career changer. I used to work for The Royal Flying Doctors in Darwin but when I moved back home I found there wasn't much work needed so I got into tech. I love the problem solving and really nice code. I probably like nice code too much and need to chill out a bit and crack on with work, but I haven't found that balance yet. I'd love to be able to give a talk on what I've learnt about fixing big ol' bugs :)",
+  "bio": "Hello! I'm Erin, I'm Australian and a bit of a career changer. I used to work for The Royal Flying Doctors in Darwin but when I moved back home I found there wasn't much work needed so I got into tech. I love the problem solving and really nice code.<br><br> I probably like nice code too much and need to chill out a bit and crack on with work, but I haven't found that balance yet. I'd love to be able to give a talk on what I've learnt about fixing big ol' bugs :)",
   "title": "How to fix a bug in a monolith",
-  "shortDesc": "She's a bit of a nutter and will probably try to release some bugs into the audience. But she's the best there is at getting those big ol' bugs back into the wild where they belong.",
+  "shortDesc": "Beekeeper Betty will take you on a journey to fix a sickly monolith. She's a bit of a nutter and will probably try to release some bugs into the audience. But she's the best there is at getting those big ol' bugs back into the wild where they belong.",
   "description": "Beekeeper Betty will take you on a journey to fix a sickly monolith. She's a bit of a nutter and will probably try to release some bugs into the audience. But she's the best there is at getting those big ol' bugs back into the wild where they belong. She's got a step by step process and some handy tools like Gitlens and Heatmap to aid her on her way. She's very thorough, she thinks about lots of different things. Like is this a case that doesn't need a coding solution? Or what risks might this new code introduce? Just be wary that she hasn't hidden some creepy crawlies or spiders under your seat! ",
   "twitter": "erinbelot",
   "picture": "./img/speakers/speaker-erin.jpg",
