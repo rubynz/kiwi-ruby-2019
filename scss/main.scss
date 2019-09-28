@@ -119,6 +119,10 @@ $vanillaLight : #fff1de;
     border-top: 1px solid #f2c98c;
 }
 
+.kr-red {
+    color: $plum;
+}
+
 h2, h3 {
     font-family: 'Source Code Pro', monospace;
     font-weight: 700;
@@ -522,6 +526,12 @@ body {
     &_inner {
         padding: 2em 1em;
         padding-bottom: 0;
+
+        .row--events & {
+            width: 100%;
+            max-width: 940px;
+        }
+
         @media only screen and (min-width: 667px){ 
             padding: 2em 2em;
             padding-bottom: 0;

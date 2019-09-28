@@ -35,6 +35,7 @@ var paths = {
 };
 
 var talks = require('./content/speakers/talks.json');
+var versionNumber = 1.12 + Math.random();
 
 function generalTemplates(env) {
 
