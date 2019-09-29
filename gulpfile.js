@@ -12,7 +12,8 @@ rename = require('gulp-rename'),
 compilehandlebars = require('gulp-compile-handlebars'),
 templateHtml = require('gulp-template-html'),
 gutil = require('gulp-util'),
-del = require('del');
+del = require('del'),
+replace = require('gulp-replace');
 
 var paths = {
 	styles: {
@@ -35,7 +36,7 @@ var paths = {
 };
 
 var talks = require('./content/speakers/talks.json');
-var versionNumber = 1.12 + Math.random();
+var versionNumber = 2 + Math.random();
 
 function generalTemplates(env) {
 
@@ -68,6 +69,7 @@ return gulp
     }))
     .pipe(templateHtml('templates/template.html'))
     .pipe(removeCode(rcOptions))
+    .pipe(replace('<!-- replace:version -->', versionNumber))
 	.pipe(gulp.dest('./'));
 }
 
