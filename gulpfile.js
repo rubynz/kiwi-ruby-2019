@@ -86,10 +86,10 @@ return gulp
     // Use postcss with autoprefixer and compress the compiled file using cssnano
     .pipe(postcss([autoprefixer(), cssnano()]))
 
-    .pipe(rename({
-        suffix: versionNumber,
-        extname: ".css"
-    }))
+    // .pipe(rename({
+    //     suffix: versionNumber,
+    //     extname: ".css"
+    // }))
     // Now add/write the sourcemaps
     .pipe(sourcemaps.write())
    
