@@ -124,7 +124,7 @@ gulp.watch(paths.templates.src, generalTemplates).on('change', browserSync.reloa
 }
 
 function cleaner() {
-    return del('css/*.css', {force:true});
+    return del(['css/*.css', '!css/normalize.css'], {force:true});
 };
 
 // We don't have to expose the reload function
