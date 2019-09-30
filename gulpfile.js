@@ -38,7 +38,7 @@ var paths = {
 };
 
 var talks = require('./content/speakers/talks.json');
-var versionNumber = 2 + Math.random();
+var versionNumber = '-v' + (2 + Math.random());
 
 function generalTemplates(env) {
 
@@ -78,14 +78,21 @@ return gulp
 function style() {
 return gulp
     .src(paths.styles.src)
+
     // Initialize sourcemaps before compilation starts
     .pipe(sourcemaps.init())
     .pipe(sass())
     .on("error", sass.logError)
     // Use postcss with autoprefixer and compress the compiled file using cssnano
     .pipe(postcss([autoprefixer(), cssnano()]))
+
+    .pipe(rename({
+        suffix: versionNumber,
+        extname: ".css"
+    }))
     // Now add/write the sourcemaps
     .pipe(sourcemaps.write())
+   
     .pipe(gulp.dest(paths.styles.dest))
     // Add browsersync stream pipe after compilation
     .pipe(browserSync.stream());
@@ -117,11 +124,7 @@ gulp.watch(paths.templates.src, generalTemplates).on('change', browserSync.reloa
 }
 
 function cleaner() {
-    if (gutil.env.env === 'prod' ? true : false) {
-        return del(paths.notProd.src, {force:true});
-    } else {
-        return del('!speakers')
-    }
+    return del('css/*.css', {force:true});
 };
 
 // We don't have to expose the reload function
@@ -142,8 +145,7 @@ exports.cleaner = cleaner;
 * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
 */
 
-// var build = gulp.series(cleaner, gulp.parallel(style, generalTemplates, watch));
-var build = gulp.series(gulp.parallel(style, generalTemplates, watch));
+var build = gulp.series(gulp.parallel(cleaner, style, generalTemplates, watch));
 
 
 
