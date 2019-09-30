@@ -30,8 +30,10 @@ var paths = {
 		dest: './'
     },
     notProd: {
-        src: ['schedule'],
-        srcContent: '!content/schedule/**/*'
+        // src: ['schedule'],
+        // srcContent: '!content/schedule/**/*'
+        src: '',
+        srcContent: ''
     }
 };
 

@@ -476,6 +476,15 @@ body {
         &:nth-child(5) {
             transition-delay: 750ms;
         }
+        &:nth-child(6) {
+            transition-delay: 800ms;
+        }
+        &:nth-child(7) {
+            transition-delay: 850ms;
+        }
+        &:nth-child(8) {
+            transition-delay: 900ms;
+        }
         opacity: 0;
         transform: translateY(-10px);
 
