@@ -43,7 +43,7 @@ var hasScrolled = false;
     function scheduleUpdate() {
     
         var pastEls = document.getElementsByClassName("kr-schedule_item"),
-        thisPos = 0.
+        thisPos = 0,
         thisHash = '',
         now = Date.now(),
         overDate = null,
