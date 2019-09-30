@@ -29,12 +29,12 @@ var paths = {
 		cache: 'cache',
 		dest: './'
     },
-    notProd: {
-        // src: ['schedule'],
-        // srcContent: '!content/schedule/**/*'
-        src: '',
-        srcContent: ''
-    }
+    // notProd: {
+    //     // src: ['schedule'],
+    //     // srcContent: '!content/schedule/**/*'
+    //     src: '',
+    //     srcContent: ''
+    // }
 };
 
 var talks = require('./content/speakers/talks.json');
@@ -45,11 +45,11 @@ function generalTemplates(env) {
 rcOptions = (gutil.env.env === 'dev') ? { dev: true, live: false } : { dev: false, live: true }
 
 
-if (gutil.env.env === 'prod') {
-    notProdTemplates = ['content/**/*.html', paths.notProd.srcContent];
-} else {
+// if (gutil.env.env === 'prod') {
+//     notProdTemplates = ['content/**/*.html', paths.notProd.srcContent];
+// } else {
     notProdTemplates = ['content/**/*.html'];
-}
+// }
 
 return gulp
     .src( notProdTemplates )
@@ -142,7 +142,8 @@ exports.cleaner = cleaner;
 * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
 */
 
-var build = gulp.series(cleaner, gulp.parallel(style, generalTemplates, watch));
+// var build = gulp.series(cleaner, gulp.parallel(style, generalTemplates, watch));
+var build = gulp.series(gulp.parallel(style, generalTemplates, watch));
 
 
 
