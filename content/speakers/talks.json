@@ -60,18 +60,6 @@
   "live": true,
   "julianna": true
   }, {
-  "name": "Erin Belot",
-  "bio": "Hello! I'm Erin, I'm Australian and a bit of a career changer. I used to work for The Royal Flying Doctors in Darwin but when I moved back home I found there wasn't much work needed so I got into tech. I love the problem solving and really nice code.<br><br> I probably like nice code too much and need to chill out a bit and crack on with work, but I haven't found that balance yet. I'd love to be able to give a talk on what I've learnt about fixing big ol' bugs :)",
-  "title": "How to fix a bug in a monolith",
-  "shortDesc": "Beekeeper Betty will take you on a journey to fix a sickly monolith. She's a bit of a nutter and will probably try to release some bugs into the audience. But she's the best there is at getting those big ol' bugs back into the wild where they belong.",
-  "description": "Beekeeper Betty will take you on a journey to fix a sickly monolith. She's a bit of a nutter and will probably try to release some bugs into the audience. But she's the best there is at getting those big ol' bugs back into the wild where they belong. She's got a step by step process and some handy tools like Gitlens and Heatmap to aid her on her way. She's very thorough, she thinks about lots of different things. Like is this a case that doesn't need a coding solution? Or what risks might this new code introduce? Just be wary that she hasn't hidden some creepy crawlies or spiders under your seat! ",
-  "twitter": "erinbelot",
-  "picture": "./img/speakers/speaker-erin.jpg",
-  "tags": ["Ruby", "Rails", "Bugs", "Gitlens", "Heatmap"],
-  "link" : "erin",
-  "live": true,
-  "erin": true
-  }, {
   "name": "Lena Plaksina",
   "bio": "Hi, I’m Lena. I’m an avid cat rescuer, learning enthusiast, and Rails Bridge Wellington organising committee member. I started out in design, but fell for web and software development during my first industry internship. I've been writing Ruby since 2015, and I'm currently learning other languages to expand my toolkit. I’m all about finding patterns, building and communicating software in a way that helps everyone understands it, and failing better – mistakes make me a better developer, and I believe that failing is just an opportunity to learn.<br><br>When I’m not coding, I’m watching movies with my 3-legged rescue cat Warlock, collecting enamel pins, and helping out and/or presenting at tech community events around town.",
   "title": "Just my type: things I learned from writing my own programming language",
